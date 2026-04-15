@@ -1,0 +1,54 @@
+### Home route (Check if backend is running)
+GET http://127.0.0.1:5000/
+
+### Add Truck 1
+POST http://127.0.0.1:5000/add-truck
+Content-Type: application/json
+
+{
+  "truck_number": "UK18CA2094",
+  "capacity": 30,
+  "details": "Tata Truck"
+}
+
+### Add Truck 2
+POST http://127.0.0.1:5000/add-truck
+Content-Type: application/json
+
+{
+  "truck_number": "UK18CA4094",
+  "capacity": 25,
+  "details": "Tata Truck"
+}
+
+### Get all trucks
+GET http://127.0.0.1:5000/trucks
+
+### Add Trip 1
+POST http://127.0.0.1:5000/add-trip
+Content-Type: application/json
+
+{
+  "truck_id": 1,
+  "trip_date": "2025-10-04",
+  "origin": "Delhi",
+  "destination": "Noida",
+  "goods": "Cement",
+  "quantity": 100
+}
+
+### Add Trip 2
+POST http://127.0.0.1:5000/add-trip
+Content-Type: application/json
+
+{
+  "truck_id": 2,
+  "trip_date": "2025-10-05",
+  "origin": "Gurgaon",
+  "destination": "Faridabad",
+  "goods": "Steel",
+  "quantity": 50
+}
+
+### Get all trips
+GET http://127.0.0.1:5000/trips
